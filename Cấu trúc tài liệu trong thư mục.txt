@@ -1,6 +1,0 @@
-- BT : bt trên lớp
-- Làm bài: Làm bt các thứ (xóa sau học xong)
-- bài giảng: bài giảng, giáo trình, tài liệu của trường, lớp
-- một số thư mục được phân cấp khác: code, thực hành,...
-- khác: tài liệu tải ngoài
-- còn lại các file khác ở đây. Nếu 1 dạng thư mục nào < 2 file thì cho ra ngoài này
