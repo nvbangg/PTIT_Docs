@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[utf8]{vietnam}
+\usetikzlibrary{trees}
+\pagestyle{fancy}
+
+\lhead{B24DTCNxxx}
+\chead{Mai Thành Đạt}
+\rhead{PTIT ELE1319 HW.0x}
+%
+\lfoot{Fulfilled FIT Course by Pham@PTIT}
+%\chead{Austin Bossart - Homework Number}
+\rfoot{EIC \& DSP Lab.}
+
+\begin{document}
+%% =================
+%%		Nội dung minh họa cách làm bài bắt đầu từ đây
+%% =================
+
+\textbf{Câu 1}: Tính entropy của nguồn rời rạc không nhớ
+\begin{equation*}
+    X = \begin{pmatrix}
+        x_1 & x_2 & x_3 & x_3 \\
+        \frac{1}{4} & \frac{1}{8} & \frac{1}{8} & \frac{1}{2}
+    \end{pmatrix}
+\end{equation*}
+
+\textbf{Bài làm}: Áp dụng công thức định nghĩa Entropy của nguồn rời rạc không nhớ:
+$$H(X)=-\sum_{k=1}^{N}p(x_k)log(p(x_k))$$
+
+Từ dữ liệu đã cho, ta có $N=4$, triển khai công thức ta có:
+\begin{align*}
+    H(X) &= -\sum_{k=1}^{4}p(x_k)log(p(x_k))\\
+    &= -\big(p(x_1)log(p(x_1))+p(x_2)log(p(x_2))+p(x_3)log(p(x_3))+p(x_4)log(p(x_4)) \big)
+\end{align*}
+
+Thay giá trị của $p(x_k)$ ($k=\bar{1,4}$) ta được:
+\begin{align*}
+    H(X) &= -\big(\frac{1}{4}log(\frac{1}{4})+\frac{1}{8}log(\frac{1}{8})+\frac{1}{8}log(\frac{1}{8})+\frac{1}{2}log(\frac{1}{2})) \big) \\
+    &= 1.75 \text{ [bit] }
+\end{align*}
+
+
+\newpage
+\textbf{Câu 2}: Chứng minh rằng $H(X)\le log_2(|X|)$.
+
+\textbf{Bài làm}: Để đơn giản, đặt $N\triangleq |X|$ và $log_2\triangleq log$.
+
+Xét biểu thức:
+$$A = H(X)-log(N)$$
+Áp dụng định nghĩa entropy của một nguồn rời rạc, thay vào công thức ta có:
+$$A = -\sum_{k=1}^Np(x_k)log(p(x_k))-log(N)$$
+Theo tiên đề xác suất,
+$$\sum_{k=1}^Np(x_k)=1$$
+Ta có thể viết:
+$$log(N) = (log(N))\sum_{k=1}^Np(x_k)=\sum_{k=1}^Np(x_k)log(N)$$
+Thay vào biểu thức $A$, ta có:
+$$A = -\sum_{k=1}^Np(x_k)log(p(x_k))-\sum_{k=1}^Np(x_k)log(N)$$
+Cả hai số hạng đều tính $\sum_{k=1}^N$ nên có thể viết chung thành:
+$$A=-\sum_{k=1}^N\big(p(x_k))log(p(x_k))+p(x_k)log(N)\big)$$
+Biểu thức trong tổng có thể đặt nhân tử chung $p(x_k)$ ta được:
+$$A=-\sum_{k=1}^Np(x_k)\big(log(p(x_k))+log(N)\big)$$
+Tiếp tục áp dụng tính chất toán học $log_ax+log_ay = log_a(xy)$, và $-log_a(x)=log_a(\frac{1}{x})$
+biểu thức $A$ có thể viết thành:
+$$A = \sum_{k=1}^Np(x_k)log(\frac{1}{Np(x_k)})$$
+Theo kết quả toán sơ cấp, $log(\frac{1}{y})\le 1-\frac{1}{y}$; áp dụng với $y=Np(x_k)$ và kết quả vừa đề cập cho biểu thức $A$ được:
+$$A\le \sum_{k=1}^Np(x_k)(1-\frac{1}{Np(x_k)})$$
+Dễ thấy, biểu thức vế phải bằng:
+$$\sum_{k=1}^Np(x_k)-\sum_{k=1}^N\frac{1}{N}=0$$
+Do đó, $A\le 0$ suy ra đpcm.
+
+\newpage
+\textbf{Câu 3}: Cho tin $x_i$ có xác suất là $p(x_i)=0.5$, lượng tin riêng của tin này bằng các đại lượng nào dưới đây:
+
+ \begin{enumerate}[label=\Alph*.]
+    \item $4$ bit.
+    \item (CORRECT) $1$ bit.
+    \item $\frac{1}{4}$ bit.
+    \item $2$ bit.
+ \end{enumerate}
+
+
+\textbf{Giải}: Theo công thức định nghĩa, lượng tin của một tin xuất hiện với xác suất $p(x_i)$ bằng $I(x_i)=-log_2(p(x_i))$, thay xác suất đã cho $p(x_i)=0.5$ vào ta có:
+
+$$ I(x_i) = - log_2(0.5) = 1 [bit]$$
+
+Do đó, đáp án là \textbf{B}
+
+%% =================
+%%		Nội dung minh họa cách làm kết thúc ở đây
+%% =================
+%% =================
+%%		Nội dung bài làm sẽ bắt đầu từ đây
+%% =================
+\newpage
+\textbf{Câu x}: Nội dung câu hỏi
+
+\textbf{Bài làm}: Nội dung bài làm câu x
+%% =================
+%%		Nội dung bài làm sẽ kết thúc ở đây
+%% =================
+
+\end{document}
