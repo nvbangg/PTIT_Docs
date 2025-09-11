@@ -1,4 +1,6 @@
-## Tài liệu [CodePTIT](https://github.com/nvbangg/CodePTIT)
+## Tài liệu khác
+- [CodePTIT](https://github.com/nvbangg/CodePTIT)
+- [EDAns](https://github.com/nvbangg/EDAns): Tool làm nhanh ED và TOEIC
   
 ### Nhớ Follow👀 và Tặng sao⭐ trên Github nha❤️ 
  **Follow👀:** [![Follow](https://img.shields.io/github/followers/nvbangg?label=Follow&style=social)](https://github.com/nvbangg) | **Star⭐:** [![Star](https://img.shields.io/github/stars/nvbangg/PTIT_Docs?style=social)](https://github.com/nvbangg/PTIT_Docs)
