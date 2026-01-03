@@ -1,0 +1,9 @@
+Các công cụ ngoài cần download thêm:
+- Tracetcp
+- Baby Web server, Quick’n Easy FTP Server, SimpleDNS.
+http://www.pablosoftwaresolutions.com
+http://simpledns.com/
+- Wireshark
+- Packet Tracer
+
+
